@@ -62,4 +62,67 @@ export const galleryItems = [
       'https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg',
     description: 'Lighthouse Coast Sea',
   },
+  {
+    preview:
+      'https://cdn.pixabay.com/photo/2020/07/04/20/12/green-lizard-5370821__340.jpg',
+    original:
+      'https://cdn.pixabay.com/photo/2020/07/04/20/12/green-lizard-5370821_960_720.jpg',
+    description: 'Green Lizard',
+  },
+  {
+    preview:
+      'https://cdn.pixabay.com/photo/2022/04/21/19/47/lion-7148207__340.jpg',
+    original:
+      'https://cdn.pixabay.com/photo/2022/04/21/19/47/lion-7148207_960_720.jpg',
+    description: 'Lion',
+  },
+  {
+    preview:
+      'https://cdn.pixabay.com/photo/2022/05/16/18/17/sheep-7200918__340.jpg',
+    original:
+      'https://cdn.pixabay.com/photo/2022/05/16/18/17/sheep-7200918_960_720.jpg',
+    description: 'Sheeps',
+  },
+  {
+    preview:
+      'https://cdn.pixabay.com/photo/2021/07/24/01/54/macaw-6488488__340.jpg',
+    original:
+      'https://cdn.pixabay.com/photo/2021/07/24/01/54/macaw-6488488_960_720.jpg',
+    description: 'Macaw Ara',
+  },
+  {
+    preview:
+      'https://cdn.pixabay.com/photo/2022/04/27/07/47/bee-7159876__340.jpg',
+    original:
+      'https://cdn.pixabay.com/photo/2022/04/27/07/47/bee-7159876_960_720.jpg',
+    description: 'Bee in flower',
+  },
+  {
+    preview:
+      'https://cdn.pixabay.com/photo/2022/05/01/12/36/great-spotted-woodpecker-7167422__340.jpg',
+    original:
+      'https://cdn.pixabay.com/photo/2022/05/01/12/36/great-spotted-woodpecker-7167422_960_720.jpg',
+    description: 'Great Spotted Woodpecker',
+  },
+  {
+    preview:
+      'https://cdn.pixabay.com/photo/2017/12/10/15/16/white-horse-3010129__340.jpg',
+    original:
+      'https://cdn.pixabay.com/photo/2017/12/10/15/16/white-horse-3010129_1280.jpg',
+    description: 'White horse',
+  },
+  {
+    preview:
+      'https://cdn.pixabay.com/photo/2018/01/22/14/13/animal-3099035__340.jpg',
+    original:
+      'https://cdn.pixabay.com/photo/2018/01/22/14/13/animal-3099035_1280.jpg',
+    description: 'Three horses',
+  },
+  {
+    preview:
+      'https://cdn.pixabay.com/photo/2013/07/19/00/18/splashing-165192__340.jpg',
+    original:
+      'https://cdn.pixabay.com/photo/2013/07/19/00/18/splashing-165192_1280.jpg',
+    description: 'Water',
+  },
 ];
