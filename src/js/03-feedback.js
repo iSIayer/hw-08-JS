@@ -38,6 +38,6 @@ function getValueFormData() {
   const savedData = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
   if (savedData) {
     refs.input.value = savedData.name;
-    refs.textarea.value = savedData.comment;
+    // refs.textarea.value = savedData.comment;
   }
 }
