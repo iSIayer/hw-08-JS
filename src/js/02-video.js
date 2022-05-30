@@ -35,5 +35,3 @@ player.on('timeupdate', throttle(onPlay, 1000));
 player.getVideoTitle().then(function (title) {
   console.log('title:', title);
 });
-
-// ==============================================================
