@@ -1,5 +1,4 @@
 import throttle from 'lodash.throttle';
-import validEmail from 'validator';
 
 const refs = {
   form: document.querySelector('.feedback-form'),
@@ -8,49 +7,34 @@ const refs = {
 };
 const LOCAL_STORAGE_KEY = 'feedback-form-state';
 
-refs.form.addEventListener('submit', throttle(handleSubmit, 500));
-refs.input.addEventListener('input', handleInput);
-refs.textarea.addEventListener('input', handleInput);
+refs.form.addEventListener('submit', handleSubmit);
+refs.input.addEventListener('input', throttle(handleInput, 500));
+refs.textarea.addEventListener('input', throttle(handleInput, 500));
 
-saveValueFormData();
-
+getValueFormData();
+// Create a function that will throttle the event handler.
 function handleSubmit(event) {
   event.preventDefault();
   console.log(JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)));
-  const formData = {
-    name: refs.input.value,
-    comment: refs.textarea.value,
-  };
-  if (validateForm(formData)) {
-    saveForm(formData);
-    refs.form.reset();
-    refs.input.value = '';
-    refs.textarea.value = '';
-  }
+  refs.form.reset();
+  refs.input.value = '';
+  refs.textarea.value = '';
 }
-
+// This function will be called when the user types in the input field.
 function handleInput() {
   const formData = {
     name: refs.input.value,
     comment: refs.textarea.value,
   };
-  if (validateForm(formData)) {
-    refs.form.classList.remove('error');
-  } else {
-    refs.form.classList.add('error');
-  }
+  saveForm(formData);
 }
-
-function validateForm(formData) {
-  return validEmail.isEmail(formData.name) && formData.comment.length > 10;
-}
-
+// Saved data is saved in localStorage as a string.
 function saveForm(formData) {
   const formState = JSON.stringify(formData);
   localStorage.setItem(LOCAL_STORAGE_KEY, formState);
 }
-
-function saveValueFormData() {
+//
+function getValueFormData() {
   const savedData = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
   if (savedData) {
     refs.input.value = savedData.name;
