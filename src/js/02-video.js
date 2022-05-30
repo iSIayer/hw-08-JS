@@ -9,7 +9,7 @@ const currentTimePlayer = localStorage.getItem('videoplayer-current-time');
 player
   .setCurrentTime(currentTimePlayer)
   .then(function (seconds) {
-    // seconds = the actual time that the player seeked to
+    // seconds = the actual time that the player
   })
   .catch(function (error) {
     switch (error.name) {
