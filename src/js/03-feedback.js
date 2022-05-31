@@ -19,6 +19,7 @@ function handleSubmit(event) {
   refs.form.reset();
   refs.input.value = '';
   refs.textarea.value = '';
+  localStorage.removeItem(LOCAL_STORAGE_KEY);
 }
 // This function will be called when the user types in the input field.
 function handleInput() {
@@ -38,6 +39,6 @@ function getValueFormData() {
   const savedData = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
   if (savedData) {
     refs.input.value = savedData.name;
-    // refs.textarea.value = savedData.comment;
+    refs.textarea.value = savedData.comment;
   }
 }
